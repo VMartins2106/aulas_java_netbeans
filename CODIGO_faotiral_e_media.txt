@@ -1,0 +1,107 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package pct;
+import java.util.Scanner;
+
+/**
+ *
+ * @author manager
+ */
+public class fatorial_media{
+    public static void main(String[] args) {
+
+        //Declaração de variáveis
+        
+        int op, m, n;
+        float media;
+        
+        do{
+            //Apresentação
+
+            Scanner entrada=new Scanner(System.in);
+
+            System.out.println("\n** Calculadora de fatoriais e média **\n");
+
+            //Menu
+
+            System.out.println("[1]. Fatorial");
+            System.out.println("[2]. Média");
+            System.out.println("[3]. Sair");
+
+            //Opção
+
+            System.out.println("Opção: ");
+            op = entrada.nextInt();
+
+            //Processamento
+
+            switch(op){
+
+                case 1:
+                    //Declaração de variáveis
+                    double fat = 1;
+                    
+                    //Fatorial
+                    System.out.println("\n\t\t\t Fatorial \n");
+                    
+                    //Entrada
+                    System.out.print("Informe o número fatorial: ");
+                    n = entrada.nextInt();
+                    
+                    //Processamento
+                    for(int i = n; i >= 1; i--){
+                        fat *= i;
+                    }
+                    
+                    //Saída
+                    System.out.printf("%d! = %f", n, fat);
+                    break;
+
+
+                case 2:
+                    //Declaração de variáveis
+                    int n1, entrad = 0;
+                    double numeros = 0, medi = 0, soma;
+                    //Média
+                    System.out.println("\n\t\t\t Média \n");
+                    
+                    //Entrada
+                    System.out.println("Com quantos números devemos fazer a média: ");
+                    m = entrada.nextInt();
+                    
+                    //Processamento
+                    while(m<=0){
+                        System.out.println("Opção inválida. Digite um número maior que 0: ");
+                        m = entrada.nextInt();
+                    }
+                        System.out.println("\nCerto, agora informe quais são estes "+m+" números: \n");
+                        for (n1=1; n1<=m; n1=n1+1){
+                            System.out.println("\nInforme o " +n1+ "º valor: \n");
+                            entrad = entrada.nextInt();
+                            //FAZER VARIAVEL ACUMULATIVA PARA NUMEROS
+                            numeros += entrad;
+                            //Processamento da média final
+                            medi = numeros/m;
+                        }
+                        
+                        System.out.printf("MEDIA: %f", +medi);
+                    
+                    //Saída
+                    break;
+
+                    
+                case 3:
+                    //Sair
+                    System.out.println("Obrigado e volte sempre!!");
+                    break;
+
+                default:
+                    System.out.printf("Opção %d inválida\n", op);
+
+                }
+        }while(op != 3);
+    }
+}

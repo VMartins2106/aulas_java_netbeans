@@ -1,0 +1,109 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package pct;
+
+import static java.lang.System.out;
+import java.util.Scanner;
+
+/**
+ *
+ * @author B1-08
+ */
+public class CalcSimples {
+    
+    public static void main(String[] args) {
+        //Declaração de variáveis
+        int num1, num2, total;
+        
+        //Criação e instância do objeto de entrada
+        Scanner entrada = new Scanner(System.in);
+
+
+        //Apresentação
+        System.out.println("\n\t\t\t -- Calculadora Simples --\n");
+        
+        //Soma simples
+        System.out.println("\tSoma simples: ");
+        
+        //Entradas
+        System.out.print("Informe um número para soma: ");
+        num1 = entrada.nextInt();
+        System.out.print("Informe outro número para somar: ");
+        num2 = entrada.nextInt();
+                        
+        //Processamento
+        total = num1 + num2;
+                        
+        //Saída
+        System.out.printf("\n\t %d + %d = %d\n", num1, num2, total);
+        
+        //Subtração
+        System.out.println("\tSubtração: ");
+        
+        //Entradas
+        System.out.print("Informe um número para subtração: ");
+        num1 = entrada.nextInt();
+        System.out.print("Informe outro número para subtrair: ");
+        num2 = entrada.nextInt();
+        //Processamento
+        
+        total = num1 - num2;
+        
+        //Saída
+        
+         System.out.printf("\n\t %d - %d = %d\n", num1, num2, total);
+        
+        //Multiplicação
+        System.out.println("\tMultiplicação: ");
+        
+        //Entradas
+        System.out.print("Informe um número para multiplicação: ");
+        num1 = entrada.nextInt();
+        System.out.print("Informe outro número multiplicar: ");
+        num2 = entrada.nextInt();
+        //Processamento
+        
+        total = num1 * num2; 
+        
+        //Saída
+        
+       System.out.println("\n\t " + num1 + " vezes " + num2 +  " = " + total + "\n");
+        
+        //Divisão
+        System.out.println("\tDivisão: ");
+        
+        //Entrada
+        System.out.print("Informe um número para divisão: ");
+        num1 = entrada.nextInt();
+        System.out.print("Informe outro número para dividir: ");
+        num2 = entrada.nextInt();
+        //Processamento
+        
+        total = num1/num2;
+        
+        //Saída
+        
+        System.out.println("\n\t " + num1 + " dividido por " + num2 +  " = " + total + "\n");
+        
+        //Resto inteiro da divisão
+        System.out.println("\tResto: ");
+        
+        //Entrada
+        System.out.print("Informe um número para determinar o resto: ");
+        num1 = entrada.nextInt();
+        System.out.print("Informe outro número: ");
+        num2 = entrada.nextInt();       
+        //Processamento
+        
+        total = num1 % num2;
+        
+        //Saída
+        System.out.println("\n\t " + num1 + " resto " + num2 +  " = " + total + "\n");
+        
+        
+    }
+    
+}

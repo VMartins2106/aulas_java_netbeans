@@ -1,0 +1,29 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package pct;
+import java.util.Scanner;
+/**
+ *
+ * @author Win10
+ */
+public class testewhile {
+    public static void main(String[] args) {
+        
+        int idade;
+        
+        Scanner entrada = new Scanner(System.in);
+        
+        System.out.println("Informe sua idadde:");
+        idade = entrada.nextInt();
+                
+        if(idade == 18){
+            System.out.println("Cadastrado");
+        }while(idade != 18){
+            System.out.println("Você não tem acesso");
+            break;
+        }
+    }
+}
